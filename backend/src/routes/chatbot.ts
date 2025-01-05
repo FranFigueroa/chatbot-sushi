@@ -4,6 +4,6 @@ import { processMessage } from '../controllers/chatbotController';
 const router = express.Router();
 
 // Procesar mensaje chatbot
-router.post('/', processMessage);
+router.post('/message', processMessage);
 
 export default router;

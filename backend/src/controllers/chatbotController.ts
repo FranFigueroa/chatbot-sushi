@@ -21,7 +21,13 @@ export const processMessage = async (
 
     let responseMessage = '';
 
-    if (message.toLowerCase().includes('menu')) {
+    if (message.toLowerCase().includes('hola')) {
+  responseMessage = '¡Hola! ¿En qué puedo ayudarte?';
+} else if (message.toLowerCase().includes('menu')) {
+  responseMessage = 'Nuestro menú incluye variedad de sushis...';
+}
+
+    else if (message.toLowerCase().includes('menu')) {
       responseMessage =
         'Nuestro menú incluye variedad de sushis como nigiri, sashimi, maki, etc. ¿Te gustaría ver el menú completo?';
     } else if (message.toLowerCase().includes('pedido')) {
