@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Sushi de Salmón",
+    "description": "Sushi con salmón fresco",
+    "price": 5.99,
+    "available": true
+  },
+  {
+    "name": "Nigiri de Atún",
+    "description": "Nigiri con atún de alta calidad",
+    "price": 6.99,
+    "available": true
+  },
+  {
+    "name": "Maki de Aguacate",
+    "description": "Rollos vegetarianos con aguacate",
+    "price": 4.99,
+    "available": true
+  }
+]
