@@ -1,0 +1,27 @@
+# Chatbot de Sushi
+
+¡Bienvenido al Chatbot de Sushi! Este proyecto permite a los usuarios:
+- Mostrar un **menú de sushi**.
+- **Tomar pedidos** básicos.
+- Responder **preguntas frecuentes** como "¿Están abiertos?".
+
+## Tecnologías Principales
+
+- **Node.js + Express** (Backend con TypeScript)
+- **MongoDB** (Almacena productos y pedidos)
+- **React/Next.js** (Frontend con TypeScript) – Interfaz básica de prueba
+- **Axios** y **React Query** (en el frontend) para llamadas a la API
+- (Opcional) **Jest** / **Supertest** (para tests básicos)
+
+---
+
+## Requerimientos Previos
+
+1. **Node.js** v14+ y **npm** (o yarn).
+2. **MongoDB** instalado y corriendo en `mongodb://localhost:27017` o similar.
+3. **Git** para clonar el repositorio (opcional).
+
+---
+
+## Estructura del Proyecto
+
