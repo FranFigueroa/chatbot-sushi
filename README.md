@@ -53,7 +53,7 @@ Respuesta: "Nuestro restaurante está abierto de lunes a viernes de 12:00 PM a 1
 "pedido":
 Respuesta: "Claro, para hacer un pedido, por favor indícame los tipos de sushi y las cantidades que deseas."
 
-## Enpoints
+## Endpoints
 
 **Productos**
 POST - Envía un mensaje al chatbot y recibe una respuesta.
