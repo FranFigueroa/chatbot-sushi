@@ -11,22 +11,21 @@
 - **MongoDB** (Almacena productos y pedidos)
 - **React/Next.js** (Frontend con TypeScript) – Interfaz básica de prueba
 - **Axios** y **React Query** (en el frontend) para llamadas a la API
-- (Opcional) **Jest** / **Supertest** (para tests básicos)
+- **Jest** / **Supertest** (para tests básicos)
 
 ---
 
 ## Requerimientos Previos
 
-1. **Node.js** v14+ y **npm** (o yarn).
-2. **MongoDB** instalado y corriendo en `mongodb://localhost:27017` o similar.
-3. **Git** para clonar el repositorio (opcional).
+1. **Node.js** v14+ y **npm**.
+2. **MongoDB** i.
 
 ---
 
 ## Base de datos
 El Script Seed.ts carga los productos automaticamente
 Dentro del archivo src/Products.ts se encuentran cargados algunos productos de prueba
-Dentro del directorio Backend ejecutor npm run seed para cargar los productos
+Dentro del directorio Backend npm run seed para cargar los productos
 
 Con lo siguiente comprobamos que los datos se hayan cargado correctamente
 mongo
