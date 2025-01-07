@@ -1,8 +1,6 @@
-// src/controllers/chatbotController.ts
-
 import { Request, Response, NextFunction } from 'express';
 
-// Procesar mensajes del chatbot
+// Procesa mensajes del chatbot
 export const processMessage = async (
   req: Request,
   res: Response,
@@ -16,29 +14,42 @@ export const processMessage = async (
   }
 
   try {
-    // Aquí integrarías con tu plataforma de NLP (Dialogflow, Rasa, etc.)
-    // Por simplicidad, responderemos de forma estática
-
     let responseMessage = '';
 
-    if (message.toLowerCase().includes('hola')) {
-  responseMessage = '¡Hola! ¿En qué puedo ayudarte?';
-} else if (message.toLowerCase().includes('menu')) {
-  responseMessage = 'Nuestro menú incluye variedad de sushis...';
-}
+    const lowerCaseMessage = message.toLowerCase();
 
-    else if (message.toLowerCase().includes('menu')) {
+    // Respuestas personalizadas
+    if (lowerCaseMessage.includes('hola') || lowerCaseMessage.includes('buenas')) {
+      responseMessage = '¡Hola! Bienvenido al Chatbot de Sushi. ¿En qué puedo ayudarte hoy?';
+    } else if (lowerCaseMessage.includes('menu')) {
       responseMessage =
-        'Nuestro menú incluye variedad de sushis como nigiri, sashimi, maki, etc. ¿Te gustaría ver el menú completo?';
-    } else if (message.toLowerCase().includes('pedido')) {
+        'Nuestro menú incluye variedades como nigiri, sashimi, maki y más. ¿Te gustaría detalles de algún tipo de sushi en particular?';
+    } else if (lowerCaseMessage.includes('pedido')) {
       responseMessage =
-        'Claro, para hacer un pedido, por favor indícame los tipos de sushi y las cantidades que deseas.';
-    } else if (message.toLowerCase().includes('horarios')) {
+        'Para hacer un pedido, dime los tipos de sushi y las cantidades que deseas. Cuando terimnes, en el mismo mensaje responde "Listo el pedido!" ¡Estoy aquí para ayudarte!';
+    } else if (lowerCaseMessage.includes('horarios')) {
       responseMessage =
-        'Nuestro restaurante está abierto de lunes a viernes de 12:00 PM a 10:00 PM y sábados y domingos de 1:00 PM a 11:00 PM.';
-    } else {
+        'Nuestro restaurante está abierto de lunes a viernes de 12:00 PM a 10:00 PM y los fines de semana de 1:00 PM a 11:00 PM.';
+    } else if (lowerCaseMessage.includes('dirección')) {
       responseMessage =
-        '¡Lo siento! No entendí tu mensaje. Por favor, intenta nuevamente.';
+        'Nos encontramos en Avenida Sushi N.º 123. ¡Esperamos tu visita pronto!';
+    } else if (lowerCaseMessage.includes('gracias')) {
+      responseMessage = '¡De nada! Si tienes más preguntas, no dudes en escribirme.';
+    } else if (lowerCaseMessage.includes('adiós') || lowerCaseMessage.includes('chau')) {
+      responseMessage = '¡Adiós! Espero haberte ayudado. ¡Que tengas un excelente día!';
+    } else if (lowerCaseMessage.includes('precios')) {
+      responseMessage =
+        'Los precios varían dependiendo del tipo de sushi. Por ejemplo, nigiri desde $6.99 y rolls desde $4.99. ¿Te gustaría algo en especial?';
+    } else if (lowerCaseMessage.includes('promociones')) {
+      responseMessage =
+        'Hoy tenemos una promoción: ¡2x1 en nigiri de atún! ¿Te interesa?';
+    }else if (lowerCaseMessage.includes('Listo el pedido!')) {
+      responseMessage =
+        'Pedido agendado, a que direccion?';
+    } 
+    else {
+      responseMessage =
+        '¡Lo siento! No entendí tu mensaje. ¿Puedes reformularlo o preguntar algo diferente?';
     }
 
     res.json({ reply: responseMessage });
@@ -46,4 +57,5 @@ export const processMessage = async (
     next(error); // Pasar el error al middleware de manejo de errores
   }
 };
+
 

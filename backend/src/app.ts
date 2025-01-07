@@ -1,4 +1,3 @@
-// src/app.ts
 import express, { Application, Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import productsRouter from './routes/products';
@@ -16,7 +15,7 @@ const app: Application = express();
 // Middleware para parsear JSON en las solicitudes
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // o ['http://localhost:3000']
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

@@ -1,4 +1,3 @@
-
 import mongoose, { Document, Schema } from 'mongoose';
 import { IProduct } from './Product';
 
@@ -25,7 +24,7 @@ const OrderSchema: Schema = new Schema({
   total: { type: Number, required: true, min: 0 },
   status: { type: String, default: 'pending' },
 }, {
-  timestamps: true, // Añade createdAt y updatedAt automáticamente
+  timestamps: true, 
 });
 
 export default mongoose.model<IOrder>('Order', OrderSchema);

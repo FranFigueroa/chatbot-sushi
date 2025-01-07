@@ -16,5 +16,78 @@
     "description": "Rollos vegetarianos con aguacate",
     "price": 4.99,
     "available": true
+  },
+  {
+    "name": "Sashimi de Camarón",
+    "description": "Sashimi de camarón fresco",
+    "price": 7.99,
+    "available": false
+  },
+  {
+    "name": "California Roll",
+    "description": "Rollo con cangrejo, aguacate y pepino",
+    "price": 6.49,
+    "available": true
+  },
+  {
+    "name": "Sushi de Anguila",
+    "description": "Sushi con anguila asada y salsa unagi",
+    "price": 7.49,
+    "available": true
+  },
+  {
+    "name": "Temaki de Salmón",
+    "description": "Cono de alga nori relleno de arroz y salmón",
+    "price": 5.49,
+    "available": true
+  },
+  {
+    "name": "Sushi de Pulpo",
+    "description": "Sushi con pulpo marinado",
+    "price": 6.49,
+    "available": true
+  },
+  {
+    "name": "Maki de Pepino",
+    "description": "Rollos vegetarianos con pepino fresco",
+    "price": 3.99,
+    "available": true
+  },
+  {
+    "name": "Rollo Dragón",
+    "description": "Rollo con anguila, pepino y aguacate decorado como un dragón",
+    "price": 8.99,
+    "available": true
+  },
+  {
+    "name": "Sopa de Miso",
+    "description": "Sopa japonesa tradicional con tofu y alga wakame",
+    "price": 2.99,
+    "available": true
+  },
+  {
+    "name": "Edamame",
+    "description": "Vainas de soja al vapor con sal marina",
+    "price": 3.49,
+    "available": true
+  },
+  {
+    "name": "Gyozas de Cerdo",
+    "description": "Empanadillas japonesas rellenas de cerdo y vegetales",
+    "price": 5.99,
+    "available": true
+  },
+  {
+    "name": "Té Verde",
+    "description": "Té verde japonés caliente",
+    "price": 1.99,
+    "available": true
+  },
+  {
+    "name": "Sake",
+    "description": "Bebida tradicional japonesa de arroz fermentado",
+    "price": 4.99,
+    "available": true
   }
 ]
+

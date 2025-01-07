@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Product from './models/Product'; // Ajusta la ruta a tu modelo
+import Product from './models/Product';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -18,7 +18,7 @@ async function seed() {
     await mongoose.connect(MONGODB_URI);
     console.log('MongoDB conectado para seeding');
 
-    // Limpiar la colección antes de sembrar (opcional)
+    // Limpiar la colección antes de sembrar
     await Product.deleteMany({});
     console.log('Colección de productos vaciada');
 
